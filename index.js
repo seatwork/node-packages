@@ -61,6 +61,6 @@ const app = next => async (req, res) => {
     }
 }
 
-module.exports = options => (...fn) => app(
-    cors(options)(body(route(...fn)))
+module.exports = opt => (...fn) => app(
+    cors(opt)(body(route(...fn)))
 )
