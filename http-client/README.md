@@ -20,9 +20,9 @@ const result = await http.request(options)
 
 ## Parameters
 
-- url: Request url.
-- data: Supports 'string', 'json object', 'buffer', 'arraybuffer' and 'stream'.
-- options
-  - method: 'GET'(default), 'POST', 'PUT', 'DELETE'.
-  - headers: The 'content-type' defaults to 'application/json'.
-  - responseType: Supports 'arraybuffer', 'stream' or null.
+* `url` - Request url. Supports http/https protocol.
+* `data` - Send data. Supports `string`, `json object`, `buffer`, `arraybuffer`and `stream`.
+* `options`
+  * `method` - `GET`(default), `POST`, `PUT`, `DELETE`.
+  * `headers` - The `Content-Type` defaults to `application/json`.
+  * `responseType` - Supports `arraybuffer`, `stream` or null.
