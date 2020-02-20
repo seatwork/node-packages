@@ -113,7 +113,7 @@ function request(options = {}) {
     Object.assign(options, url)
 
     return new Promise((resolve, reject) => {
-        const transport = url.protocol == 'https:' ? https : http
+        const transport = url.protocol === 'https:' ? https : http
 
         // 根据协议创建请求
         const req = transport.request(options, res => {

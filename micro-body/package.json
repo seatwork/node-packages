@@ -1,21 +1,22 @@
 {
-    "name": "@cloudseat/http-client",
-    "version": "1.0.9",
-    "description": "Promise based HTTP/HTTPS client for node.js",
+    "name": "@cloudseat/micro-body",
+    "version": "1.0.3",
+    "description": "A middleware to parse request body for ZEIT's micro",
     "license": "MIT",
     "author": "Ai Chen",
     "homepage": "https://github.com/seatwork",
     "repository": {
         "type": "git",
         "url": "https://github.com/seatwork/micro-middlewares.git",
-        "directory": "http-client"
+        "directory": "micro-body"
     },
     "keywords": [
-        "http",
+        "raw-body",
         "request",
-        "client",
-        "promise",
-        "node"
+        "micro",
+        "express",
+        "serverless",
+        "middleware"
     ],
     "main": "index.js",
     "scripts": {

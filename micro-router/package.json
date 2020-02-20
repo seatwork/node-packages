@@ -1,21 +1,21 @@
 {
-    "name": "@cloudseat/http-client",
-    "version": "1.0.9",
-    "description": "Promise based HTTP/HTTPS client for node.js",
+    "name": "@cloudseat/micro-router",
+    "version": "1.0.1",
+    "description": "A smart router middleware for ZEIT's Micro",
     "license": "MIT",
     "author": "Ai Chen",
     "homepage": "https://github.com/seatwork",
     "repository": {
         "type": "git",
         "url": "https://github.com/seatwork/micro-middlewares.git",
-        "directory": "http-client"
+        "directory": "micro-router"
     },
     "keywords": [
-        "http",
-        "request",
-        "client",
-        "promise",
-        "node"
+        "router",
+        "micro",
+        "express",
+        "serverless",
+        "middleware"
     ],
     "main": "index.js",
     "scripts": {

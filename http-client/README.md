@@ -2,7 +2,7 @@ A super lightweight HTTP / HTTPS client can be used in any Node.js project. Alth
 
 ## Installation
 
-```
+```bash
 npm install @cloudseat/http-client
 ```
 

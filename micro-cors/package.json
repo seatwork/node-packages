@@ -1,21 +1,21 @@
 {
-    "name": "@cloudseat/http-client",
-    "version": "1.0.9",
-    "description": "Promise based HTTP/HTTPS client for node.js",
+    "name": "@cloudseat/micro-cors",
+    "version": "1.0.1",
+    "description": "A simple CORS middleware for Zeit's Micro",
     "license": "MIT",
     "author": "Ai Chen",
     "homepage": "https://github.com/seatwork",
     "repository": {
         "type": "git",
         "url": "https://github.com/seatwork/micro-middlewares.git",
-        "directory": "http-client"
+        "directory": "micro-cors"
     },
     "keywords": [
-        "http",
-        "request",
-        "client",
-        "promise",
-        "node"
+        "cors",
+        "middleware",
+        "micro",
+        "express",
+        "serverless"
     ],
     "main": "index.js",
     "scripts": {
