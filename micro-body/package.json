@@ -1,6 +1,6 @@
 {
     "name": "@cloudseat/micro-body",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A middleware to parse request body for ZEIT's micro",
     "license": "MIT",
     "author": "Ai Chen",

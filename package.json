@@ -1,6 +1,6 @@
 {
     "name": "@cloudseat/micro-app",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "App enhancement middleware for ZEIT's Micro",
     "license": "MIT",
     "author": "Ai Chen",
@@ -18,6 +18,11 @@
         "entrypoint"
     ],
     "main": "index.js",
+    "files": [
+        "index.js",
+        "package.json",
+        "README.md"
+    ],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },

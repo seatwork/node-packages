@@ -12,10 +12,10 @@
  | @copyright (c) 2020, cloudseat.net                            |
  +---------------------------------------------------------------+
  */
-const getClientIp = require('./x-ip')
-const body = require('./micro-body')
-const cors = require('./micro-cors')
-const { route } = require('./micro-router')
+const getClientIp = require('x-ip')
+const body = require('@cloudseat/micro-body')
+const cors = require('@cloudseat/micro-cors')
+const { route } = require('@cloudseat/micro-router')
 
 // Parse data if not the standard response supported
 // standard supported is: string/buffer
