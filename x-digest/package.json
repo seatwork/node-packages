@@ -1,6 +1,6 @@
 {
     "name": "x-digest",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Message digests, ciphers and PKI for Node.js",
     "license": "MIT",
     "author": "Ai Chen",

@@ -21,7 +21,7 @@ module.exports = {
      * @return string
      */
     random(length) {
-        return crypto.randomBytes(Math.ceil(length / 2)).toString('hex')
+        return crypto.randomBytes(Math.ceil(length / 2)).toString('hex').slice(0, length)
     },
 
     /**
