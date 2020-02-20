@@ -8,6 +8,7 @@ Integrates some super tiny middlewares and utils for [Zeit's Micro](https://gith
 ## Utils
 - [http-client](https://github.com/seatwork/micro-middlewares/tree/master/http-client)
 - [x-ip](https://github.com/seatwork/micro-middlewares/tree/master/x-ip)
+- [x-digest](https://github.com/seatwork/micro-middlewares/tree/master/x-digest)
 
 ## Installation
 ```bash

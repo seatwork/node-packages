@@ -1,0 +1,29 @@
+{
+    "name": "x-digest",
+    "version": "1.0.0",
+    "description": "Message digests, ciphers and PKI for Node.js",
+    "license": "MIT",
+    "author": "Ai Chen",
+    "homepage": "https://github.com/seatwork",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/seatwork/micro-middlewares.git",
+        "directory": "x-digest"
+    },
+    "keywords": [
+        "digest",
+        "cipher",
+        "pki",
+        "hash",
+        "md5",
+        "sha1",
+        "hmac",
+        "rsa",
+        "random",
+        "crypto"
+    ],
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
+}
