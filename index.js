@@ -36,7 +36,7 @@ const send = res => (code, data) => {
 
 // Format current time
 const now = () => {
-    const date = new Date(Data.now() + 8 * 3600 * 1000)
+    const date = new Date(Date.now() + 8 * 3600 * 1000)
     return date.toJSON().substr(0, 19).replace('T', ' ')
 }
 
