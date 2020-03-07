@@ -12,6 +12,7 @@
  | @copyright (c) 2020, cloudseat.net                            |
  +---------------------------------------------------------------+
  */
+const http = require('http')
 const getClientIp = require('x-ip')
 const body = require('@cloudseat/micro-body')
 const cors = require('@cloudseat/micro-cors')
@@ -49,10 +50,9 @@ const app = next => async (req, res) => {
 
         // Send the result of handler
         const result = await next(req, res)
-        if (result) {
-            res.send(result)
-        } else {
-            res.send(204, null)
+        if (!(result instanceof http.ServerResponse)) {
+            if (result) res.send(result)
+            else res.send(204, null)
         }
     } catch (err) {
         res.statusCode = 500
