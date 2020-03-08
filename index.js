@@ -18,10 +18,14 @@ const body = require('@cloudseat/micro-body')
 const cors = require('@cloudseat/micro-cors')
 const { route } = require('@cloudseat/micro-router')
 
+const isJson = obj => {
+    return typeof obj === 'object' && Object.prototype.toString.call(obj).toLowerCase() == "[object object]" && !obj.length
+}
+
 // Parse data if not the standard response supported
 // standard supported is: string/buffer
 const stringify = data => {
-    return typeof data === 'number' || $.isJson(data) ?
+    return typeof data === 'number' || isJson(data) ?
         JSON.stringify(data) : data
 }
 
@@ -60,6 +64,10 @@ const app = next => async (req, res) => {
         console.error(`[${now()}]`, req.method, req.url, err.stack)
     }
 }
+
+process.on('uncaughtException', err => {
+    console.error(err.stack)
+})
 
 module.exports = opt => (...fn) => app(
     cors(opt)(body(route(...fn)))
