@@ -1,6 +1,6 @@
 {
     "name": "@cloudseat/micro-app",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "App enhancement middleware for ZEIT's Micro",
     "license": "MIT",
     "author": "Ai Chen",
