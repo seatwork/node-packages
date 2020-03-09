@@ -12,23 +12,29 @@
  | @copyright (c) 2020, cloudseat.net                            |
  +---------------------------------------------------------------+
  */
-const parseUrl = require('url').parse
+const url = require('url')
+
+const match = (url, pattern) => {
+    const reg = '[a-zA-Z0-9_-]+'
+    pattern = pattern.replace(new RegExp(':(' + reg + ')', 'g'), '(?<$1>' + reg + ')') + '$'
+    const result = url.match(pattern)
+    return result ? result.groups || Array.from(result).slice(1) : null
+}
 
 const method = method => (path, handler) => {
     if (!path) throw new Error('Router path is required')
     if (!handler) throw new Error('Router handler is required')
 
     return (req, res) => {
-        if (req.method !== method) return
-
-        const route = new UrlPattern(path)
-        const parsed = parseUrl(req.url, true)
-        const extend = {
-            query: parsed.query,
-            params: route.match(parsed.pathname)
-        }
-        if (extend.params) {
-            return handler(Object.assign(req, extend), res)
+        if (req.method === method) {
+            const parsed = url.parse(req.url, true)
+            const params = match(parsed.pathname, path)
+            if (params) {
+                return handler(Object.assign(req, {
+                    query: parsed.query,
+                    params: params
+                }), res)
+            }
         }
     }
 }
@@ -41,39 +47,8 @@ const route = funcs => async (req, res) => {
     return null
 }
 
-class UrlPattern {
-    constructor(path) {
-        this.regex = 'a-zA-Z0-9_-' // 参数变量中允许使用的字符
-        this.keys = [] // 临时存储解析后的键名
-
-        // 将 path 中变量占位符全部替换成正则表达式，同时保存占位符的变量名
-        // 例如 /:username/:status -> /([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)
-        path = path.replace(new RegExp(':([' + this.regex + ']+)', 'g'), (a, k) => {
-            this.keys.push(k)
-            return '([' + this.regex + ']+)'
-        })
-
-        // 在完整替换后的正则表达式中增加严格起止限制
-        // 末尾斜杠可有可无
-        this.regex = new RegExp('^' + path + '\/?$')
-    }
-
-    match(url) {
-        // 请求的 url 是否与 path 正则式匹配
-        const matched = url.match(this.regex)
-        if (matched) {
-            const params = {}
-
-            // 将匹配后的结果按占位符索引顺序生成参数对象
-            this.keys.forEach((key, i) => {
-                params[key] = matched[i + 1]
-            })
-            return params
-        }
-    }
-}
-
 module.exports = {
+    match: match,
     route: (...fn) => route(fn),
     get: method('GET'),
     post: method('POST'),

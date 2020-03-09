@@ -18,25 +18,16 @@ const body = require('@cloudseat/micro-body')
 const cors = require('@cloudseat/micro-cors')
 const { route } = require('@cloudseat/micro-router')
 
-const isJson = obj => {
-    return typeof obj === 'object' && Object.prototype.toString.call(obj).toLowerCase() == "[object object]" && !obj.length
-}
-
-// Parse data if not the standard response supported
-// standard supported is: string/buffer
-const stringify = data => {
-    return typeof data === 'number' || isJson(data) ?
-        JSON.stringify(data) : data
-}
-
 // Send data with code
 const send = res => (code, data) => {
     if (data === undefined) {
         data = code
         code = 200
     }
+    // standard supported: string/buffer
+    data = typeof data !== 'string' && !Buffer.isBuffer(data) ? JSON.stringify(data) : data
     res.statusCode = code
-    res.end(stringify(data))
+    res.end(data)
 }
 
 // Format current time
