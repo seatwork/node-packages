@@ -1,0 +1,25 @@
+{
+    "name": "@cloudseat/micro-serve",
+    "version": "1.0.0",
+    "description": "A static serve middleware for ZEIT's Micro",
+    "license": "MIT",
+    "author": "Ai Chen",
+    "homepage": "https://github.com/seatwork",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/seatwork/micro-middlewares.git",
+        "directory": "micro-serve"
+    },
+    "keywords": [
+        "router",
+        "micro",
+        "serve",
+        "express",
+        "serverless",
+        "middleware"
+    ],
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
+}
