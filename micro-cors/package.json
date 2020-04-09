@@ -1,13 +1,13 @@
 {
     "name": "@cloudseat/micro-cors",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A simple CORS middleware for Zeit's Micro",
     "license": "MIT",
     "author": "Ai Chen",
     "homepage": "https://github.com/seatwork",
     "repository": {
         "type": "git",
-        "url": "https://github.com/seatwork/micro-middlewares.git",
+        "url": "https://github.com/seatwork/node-packages.git",
         "directory": "micro-cors"
     },
     "keywords": [

@@ -1,13 +1,13 @@
 {
     "name": "x-ip",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Determine request client IP address",
     "license": "MIT",
     "author": "Ai Chen",
     "homepage": "https://github.com/seatwork",
     "repository": {
         "type": "git",
-        "url": "https://github.com/seatwork/micro-middlewares.git",
+        "url": "https://github.com/seatwork/node-packages.git",
         "directory": "x-ip"
     },
     "keywords": [

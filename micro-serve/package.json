@@ -1,13 +1,13 @@
 {
     "name": "@cloudseat/micro-serve",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A static serve middleware for ZEIT's Micro",
     "license": "MIT",
     "author": "Ai Chen",
     "homepage": "https://github.com/seatwork",
     "repository": {
         "type": "git",
-        "url": "https://github.com/seatwork/micro-middlewares.git",
+        "url": "https://github.com/seatwork/node-packages.git",
         "directory": "micro-serve"
     },
     "keywords": [

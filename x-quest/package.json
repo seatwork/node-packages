@@ -1,14 +1,14 @@
 {
     "name": "x-quest",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Promise based HTTP/HTTPS client for node.js",
     "license": "MIT",
     "author": "Ai Chen",
     "homepage": "https://github.com/seatwork",
     "repository": {
         "type": "git",
-        "url": "https://github.com/seatwork/micro-middlewares.git",
-        "directory": "http-client"
+        "url": "https://github.com/seatwork/node-packages.git",
+        "directory": "x-quest"
     },
     "keywords": [
         "http",
