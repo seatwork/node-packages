@@ -172,7 +172,10 @@ function alias(method, url, data, options = {}) {
 module.exports = {
     request: request,
     get: (url, options) => alias('GET', url, null, options),
+    head: (url, options) => alias('HEAD', url, null, options),
+    opt: (url, options) => alias('OPTIONS', url, null, options),
     post: (url, data, options) => alias('POST', url, data, options),
     put: (url, data, options) => alias('PUT', url, data, options),
-    del: (url, options) => alias('DELETE', url, null, options)
+    patch: (url, data, options) => alias('PATCH', url, data, options),
+    del: (url, options) => alias('DELETE', url, null, options),
 }

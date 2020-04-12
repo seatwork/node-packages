@@ -1,6 +1,6 @@
 {
     "name": "x-quest",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Promise based HTTP/HTTPS client for node.js",
     "license": "MIT",
     "author": "Ai Chen",
@@ -10,6 +10,7 @@
         "url": "https://github.com/seatwork/node-packages.git",
         "directory": "x-quest"
     },
+    "main": "index.js",
     "keywords": [
         "http",
         "request",
@@ -17,9 +18,5 @@
         "client",
         "promise",
         "node"
-    ],
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    }
+    ]
 }
