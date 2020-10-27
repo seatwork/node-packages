@@ -1,4 +1,6 @@
-A static serve middleware for ZEIT's Micro.
+# Micro-serve
+
+A static serve middleware for [Vercel Micro Framework](https://github.com/vercel/micro).
 
 ## Installation
 

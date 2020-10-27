@@ -1,3 +1,7 @@
+# x-digest
+
+Message digests, ciphers and PKI for Node.js.
+
 ## Installation
 
 ```bash

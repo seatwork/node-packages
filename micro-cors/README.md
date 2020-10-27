@@ -1,4 +1,6 @@
-A simple CORS middleware for [Zeit's Micro](https://github.com/zeit/micro), but also works well with all standard [http.IncomingMessage](https://nodejs.org/api/http.html#http_class_http_incomingmessage) and [http.ServerResponse](https://nodejs.org/api/http.html#http_class_http_serverresponse) objects.
+# Micro-cors
+
+A simple CORS middleware for [Vercel Micro Framework](https://github.com/vercel/micro), but also works well with all standard [http.IncomingMessage](https://nodejs.org/api/http.html#http_class_http_incomingmessage) and [http.ServerResponse](https://nodejs.org/api/http.html#http_class_http_serverresponse) objects.
 
 ## Installation
 

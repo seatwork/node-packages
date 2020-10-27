@@ -1,0 +1,27 @@
+{
+    "name": "micro-spark",
+    "version": "1.1.9",
+    "description": "Fast, lightweight, independent HTTP microserver",
+    "license": "MIT",
+    "author": "Ai Chen",
+    "homepage": "https://github.com/seatwork",
+    "repository": "https://github.com/seatwork/micro-spark.git",
+    "url": "https://www.npmjs.com/package/micro-spark",
+
+    "main": "index.js",
+    "files": [
+        "lib/*",
+        "index.js",
+        "package.json",
+        "README.md"
+    ],
+    "keywords": [
+        "spark",
+        "micro-server",
+        "http-server",
+        "static-server",
+        "serverless",
+        "template-engine",
+        "restful-api"
+    ]
+}
