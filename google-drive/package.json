@@ -1,0 +1,22 @@
+{
+    "name": "godrive",
+    "version": "1.0.1",
+    "description": "Google Drive Index",
+    "license": "MIT",
+    "author": "Ai Chen",
+    "homepage": "https://github.com/seatwork",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/seatwork/node-packages.git",
+        "directory": "google-drive"
+    },
+    "main": "index.js",
+    "keywords": [
+        "googledrive",
+        "googleapis",
+        "googleproxy"
+    ],
+    "dependencies": {
+        "node-fetch": "^2.6.1"
+    }
+}
