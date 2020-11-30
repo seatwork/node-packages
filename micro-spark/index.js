@@ -15,6 +15,7 @@
 const http = require('http')
 const parse = require('url').parse
 const pkg = require('./package')
+const cookie = require('./lib/cookie')
 const cors = require('./lib/cors')
 const ip = require('./lib/ip')
 const rawBody = require('./lib/raw-body')
@@ -86,9 +87,9 @@ const server = http.Server(async (req, res) => {
             !(result instanceof http.ServerResponse)) {
             res.send(result)
         }
-    } catch (err) {
-        console.error('\x1b[31m[ERROR]\x1b[0m', req.method, req.url, err.stack || err)
-        res.send(500, err.message || err)
+    } catch (e) {
+        console.error('\x1b[31m[ERROR]\x1b[0m', req.method, req.url, e.stack || e)
+        res.send(e.status || 500, e.message || e)
     }
 })
 
@@ -98,6 +99,7 @@ const server = http.Server(async (req, res) => {
  +--------------------------------------------------------+
  */
 use(ip)
+use(cookie)
 use(rawBody)
 use(send)
 use(serve)
