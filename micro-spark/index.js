@@ -18,6 +18,7 @@ const pkg = require('./package')
 const cookie = require('./lib/cookie')
 const cors = require('./lib/cors')
 const ip = require('./lib/ip')
+const protocol = require('./lib/protocol')
 const rawBody = require('./lib/raw-body')
 const send = require('./lib/send')
 const serve = require('./lib/serve')
@@ -98,8 +99,9 @@ const server = http.Server(async (req, res) => {
  | Exports application
  +--------------------------------------------------------+
  */
-use(ip)
 use(cookie)
+use(ip)
+use(protocol)
 use(rawBody)
 use(send)
 use(serve)
