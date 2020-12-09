@@ -1,17 +1,3 @@
-/**
- +---------------------------------------------------------------+
- | A middleware for static serve                                 |
- +---------------------------------------------------------------+
- | This program is Licensed under MIT license with conditions    |
- | only requiring preservation of copyright and license notices. |
- | Licensed works, modifications, and larger works may be        |
- | distributed under different terms and without source code.    |
- | For more see <https://opensource.org/licenses/MIT>            |
- +---------------------------------------------------------------+
- | @author Ai Chen                                               |
- | @copyright (c) 2020, cloudseat.net                            |
- +---------------------------------------------------------------+
- */
 const path = require('path')
 const fs = require('fs')
 const zlib = require('zlib')
@@ -31,10 +17,11 @@ const mimeTypes = {
     tif: 'image/tiff',
     mp3: 'audio/mpeg',
     mp4: 'video/mp4',
-    zip: 'application/zip',
     ttf: 'font/ttf',
     woff: 'font/woff',
     woff2: 'font/woff2',
+    json: 'application/json',
+    zip: 'application/zip',
 }
 
 // Handle static resources

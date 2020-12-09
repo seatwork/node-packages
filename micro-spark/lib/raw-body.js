@@ -1,18 +1,4 @@
-/**
- +---------------------------------------------------------------+
- | Request raw body parser                                       |
- +---------------------------------------------------------------+
- | This program is Licensed under MIT license with conditions    |
- | only requiring preservation of copyright and license notices. |
- | Licensed works, modifications, and larger works may be        |
- | distributed under different terms and without source code.    |
- | For more see <https://opensource.org/licenses/MIT>            |
- +---------------------------------------------------------------+
- | @author Ai Chen                                               |
- | @copyright (c) 2020, cloudseat.net                            |
- +---------------------------------------------------------------+
- */
-const queryString = require("querystring")
+const { parse } = require("querystring")
 
 function tryParseJson(data) {
     try {
@@ -40,7 +26,7 @@ function getRawBody(req) {
                     data = tryParseJson(data)
                 } else
                 if (contentType.indexOf('application/x-www-form-urlencoded') >= 0) {
-                    data = queryString.parse(data)
+                    data = parse(data)
                 }
             }
             resolve(data)

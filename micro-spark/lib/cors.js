@@ -1,25 +1,12 @@
-/**
- +---------------------------------------------------------------+
- | A simple CORS middleware                                      |
- +---------------------------------------------------------------+
- | This program is Licensed under MIT license with conditions    |
- | only requiring preservation of copyright and license notices. |
- | Licensed works, modifications, and larger works may be        |
- | distributed under different terms and without source code.    |
- | For more see <https://opensource.org/licenses/MIT>            |
- +---------------------------------------------------------------+
- | @author Ai Chen                                               |
- | @copyright (c) 2020, cloudseat.net                            |
- +---------------------------------------------------------------+
- */
-const parse = require('url').parse
+const { parse } = require('url')
+
 const defaultOptions = {
     allowCredentials: true,
     allowOrigins: ['*'],
     allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'HEAD', 'PATCH'],
     allowHeaders: ['Authorization', 'Accept', 'Content-Type'],
     exposeHeaders: [],
-    maxAge: 60 * 60 * 24 // 24 hours
+    maxAge: 3600 * 24 // 24 hours
 }
 
 // Check if the request origin exists in options

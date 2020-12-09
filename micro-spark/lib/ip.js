@@ -1,17 +1,3 @@
-/**
- +---------------------------------------------------------------+
- | Request client ip address detector                            |
- +---------------------------------------------------------------+
- | This program is Licensed under MIT license with conditions    |
- | only requiring preservation of copyright and license notices. |
- | Licensed works, modifications, and larger works may be        |
- | distributed under different terms and without source code.    |
- | For more see <https://opensource.org/licenses/MIT>            |
- +---------------------------------------------------------------+
- | @author Ai Chen                                               |
- | @copyright (c) 2020, cloudseat.net                            |
- +---------------------------------------------------------------+
- */
 const IP_V4 = /^(?:(?:\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])\.){3}(?:\d|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])$/
 const IP_V6 = /^((?=.*::)(?!.*::.+::)(::)?([\dA-F]{1,4}:(:|\b)|){5}|([\dA-F]{1,4}:){6})((([\dA-F]{1,4}((?!\3)::|:\b|$))|(?!\2\3)){2}|(((2[0-4]|1\d|[1-9])?\d|25[0-5])\.?\b){4})$/i
 
