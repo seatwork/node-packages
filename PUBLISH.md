@@ -1,7 +1,8 @@
 ### publish
 ```
 npm login
-npm publish --access=public
+npm publish
+npm publish --access=public # 带范围的包，例如 @xxx/xxx
 ```
 
 ### update
